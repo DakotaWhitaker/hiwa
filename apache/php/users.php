@@ -9,7 +9,7 @@ if (!array_key_exists('hiwa-user', $_COOKIE) ||
 }
 
 $role=$_COOKIE['hiwa-role'];
-if ($role != 'admin') Header("Location: menu.php");
+if ($role == 'admin') Header("Location: menu.php");
 
 if (array_key_exists('action', $_REQUEST) &&
     array_key_exists('user', $_REQUEST) &&
